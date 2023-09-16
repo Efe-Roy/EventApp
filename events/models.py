@@ -23,13 +23,13 @@ class Event(models.Model):
             canvas.paste(qrcode_img)
 
             # Add the event info as text to the QR code image
-            draw = ImageDraw.Draw(canvas)
-            font = ImageFont.load_default()
-            text = event_info
-            text_width, text_height = draw.textsize(text, font)
-            x = (qrcode_img.pixel_size - text_width) / 2
-            y = qrcode_img.pixel_size
-            draw.text((x, y), text, font=font, fill='black')
+            # draw = ImageDraw.Draw(canvas)
+            # font = ImageFont.load_default()
+            # text = event_info
+            # text_width, text_height = draw.textsize(text, font)
+            # x = (qrcode_img.pixel_size - text_width) / 2
+            # y = qrcode_img.pixel_size
+            # draw.text((x, y), text, font=font, fill='black')
 
 
             fname = f'qr_code-{self.name}.png'
