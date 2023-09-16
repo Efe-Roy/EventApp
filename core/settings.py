@@ -88,7 +88,11 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # }
 
 DATABASES = {
+    # internal for online server
     'default': dj_database_url.parse("postgres://testdb_e479_user:qOMFtb5W8AxiDb09n6fgN5WPRmcTL0ha@dpg-cjvi5i15mpss73b5n9m0-a/testdb_e479")
+
+    # external for local server
+    # 'default': dj_database_url.parse("postgres://testdb_e479_user:qOMFtb5W8AxiDb09n6fgN5WPRmcTL0ha@dpg-cjvi5i15mpss73b5n9m0-a.oregon-postgres.render.com/testdb_e479")
 }
 
 
