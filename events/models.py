@@ -16,7 +16,7 @@ class Event(models.Model):
     
     def save(self, *args, **kwargs):
         if not self.qr_code:
-            event_info = f"{self.name}\n\n{self.description}\n\nDate: {self.date}"
+            event_info = f"Name: {self.name}\n\nDescription: {self.description}\n\nDate: {self.date}"
             # qrcode_img = qrcode.make(self.name)
             qrcode_img = qrcode.make(event_info)
             canvas = Image.new('RGB', (qrcode_img.pixel_size, qrcode_img.pixel_size), 'white')
